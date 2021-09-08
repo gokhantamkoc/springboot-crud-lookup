@@ -25,4 +25,7 @@ public class Point {
 	
 	@Column(name = "y", nullable = false)
 	private Float y;
+
+     @OneToMany(mappedBy = "point", fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
+     private Status status;
 }
